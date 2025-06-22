@@ -1,7 +1,7 @@
 import azure.functions as func
 import logging
 import json
-from utils.logic import handle_request
+from utils.responseHandler import handle_request
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
