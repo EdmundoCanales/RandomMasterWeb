@@ -15,7 +15,7 @@ def handle_request(data):
     """
     func_name = data.get("functionName")
     sample = data.get("sample")
-    size = data.get("combinationSize") or data.get("size")
+    size = data.get("combinationSize", data.get("size"))
     amount = data.get("amount", 1)
     model_name = data.get("model")
     model_type = data.get("modelType")
