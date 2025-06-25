@@ -28,7 +28,7 @@ def resolve_data_from_request(
 ):
     if data:
         return data
-    if population and size and amount:
+    if population and size:
         if full_model:
             return generate_all_combinations(population, size)
         elif amount:
