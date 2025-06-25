@@ -1,10 +1,3 @@
-from utils.combinPropertiesFunctions import (
-    level_key,
-    level_members,
-    sequence_key,
-    prime_count,
-)
-from utils.combinationModel import CombinationModel
 from utils import combinGenerator
 from utils import blobHandler
 
@@ -20,8 +13,6 @@ def handle_request(data):
     model_name = data.get("model")
     model_type = data.get("modelType")
     provided_data = data.get("data")
-
-    prop_functions = [level_key, level_members, sequence_key, prime_count]
 
     if func_name in [
         "generateAllPossibleCombinations",
@@ -54,18 +45,7 @@ def handle_request(data):
         except Exception as e:
             return {"error generating combinations model": str(e)}, 500
 
-        models = []
-
-        try:
-            for index, combination in enumerate(combinations, start=1):
-                model = CombinationModel(combination, index)
-                model.calculate_properties(prop_functions)
-                models.append(model.to_dict())
-
-        except Exception as e:
-            return {"error generating combinations model": str(e)}, 500
-
-        return {"combinations": models}, 200
+        return {"combinations": combinations}, 200  # models
 
     elif func_name == "UploadModel":
         try:
