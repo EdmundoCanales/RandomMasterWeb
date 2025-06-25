@@ -54,6 +54,7 @@ def handle_request(data):
                 model_name=model_name,
                 population=sample,
                 size=size,
+                amount=amount,
                 data=provided_data,
             )
             return {"message": "Model uploaded successfully", "result": result}, 200
@@ -67,6 +68,7 @@ def handle_request(data):
                 model_name=model_name,
                 population=sample,
                 size=size,
+                amount=amount,
                 data=provided_data,
             )
             return {"message": "Model overwritten successfully", "result": result}, 200

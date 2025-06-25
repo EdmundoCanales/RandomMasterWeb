@@ -24,7 +24,7 @@ container_client = blob_service_client.get_container_client(BLOB_CONTAINER_NAME)
 
 # function to resolve data from request body.
 def resolve_data_from_request(
-    data=None, population=None, size=None, amount=None, full_model=False
+    data=None, population=None, size=None, amount=None, full_model=False, start_index=1
 ):
     if data:
         return data
@@ -32,12 +32,19 @@ def resolve_data_from_request(
         if full_model:
             return generate_all_combinations(population, size)
         elif amount:
-            return generate_random_combinations(population, size, amount)
+            return generate_random_combinations(population, size, amount, start_index)
+
     raise ValueError("Insufficient parameters provided to resolve data.")
 
 
-def upload_model(model_type, model_name, data=None, population=None, size=None):
-    resolved_data = resolve_data_from_request(data, population, size, full_model=True)
+def upload_model(
+    model_type, model_name, data=None, population=None, amount=None, size=None
+):
+    model_type = model_type or f"fullModel_{population}_{size}"
+    model_name = model_name or "fullModelDb"
+    resolved_data = resolve_data_from_request(
+        data, population, size, amount, full_model=(model_type.startswith("fullModel"))
+    )
     path = f"{model_type}/{model_name}.json"
     blob_client = container_client.get_blob_client(path)
     blob_client.upload_blob(json.dumps(resolved_data, indent=2), overwrite=True)
@@ -47,12 +54,17 @@ def upload_model(model_type, model_name, data=None, population=None, size=None):
     }
 
 
-def overwrite_model(model_type, model_name, data=None, population=None, size=None):
-    return upload_model(model_type, model_name, data, population, size)
+def overwrite_model(
+    model_type, model_name, data=None, population=None, amount=None, size=None
+):
+    return upload_model(model_type, model_name, data, population, amount, size)
 
 
 def append_to_model(model_name, data=None, population=None, size=None, amount=None):
-    resolved_data = resolve_data_from_request(data, population, size, amount)
+    if not model_name:
+        raise ValueError("Model name must be provided.")
+
+    # Retrieve existing data from the blob
     path = f"actualModels/{model_name}.json"
     blob_client = container_client.get_blob_client(path)
 
@@ -60,6 +72,12 @@ def append_to_model(model_name, data=None, population=None, size=None, amount=No
         existing_data = json.loads(blob_client.download_blob().readall())
     except Exception as e:
         existing_data = []
+
+    start_index = len(existing_data) + 1 if existing_data else 1
+
+    resolved_data = resolve_data_from_request(
+        data, population, size, amount, start_index=start_index
+    )
 
     if isinstance(resolved_data, list):
         existing_data.extend(resolved_data)
