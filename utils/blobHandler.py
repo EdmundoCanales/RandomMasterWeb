@@ -40,8 +40,8 @@ def resolve_data_from_request(
 def upload_model(
     model_type, model_name, data=None, population=None, amount=None, size=None
 ):
-    model_type = model_type or f"fullModel_{population}_{size}"
-    model_name = model_name or "fullModelDb"
+    model_type = model_type or "fullModels"
+    model_name = model_name or f"fullModel_{population}_{size}"
     resolved_data = resolve_data_from_request(
         data, population, size, amount, full_model=(model_type.startswith("fullModel"))
     )
