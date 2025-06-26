@@ -16,7 +16,9 @@ def generate_all_combinations(population, size):
         size (int): The size of each combination.
     """
     try:
-        result = build_combination_models(list(combinations(population, size)))
+        result = build_combination_models(
+            list(combinations(population, size)), population_size=len(population)
+        )
     except Exception as e:
         raise RuntimeError(f"Error generating all combinations: {e}")
     finally:
@@ -36,6 +38,7 @@ def generate_random_combinations(population, size, amount=1, start_index=1):
         result = build_combination_models(
             [tuple(sorted(random.sample(population, size))) for _ in range(amount)],
             start_index=start_index,
+            population_size=len(population),
         )
     except Exception as e:
         raise RuntimeError(f"Error generating random combinations: {e}")
@@ -55,14 +58,16 @@ def generate_random_unique_combinations(population, size, amount=1, start_index=
         comb = tuple(sorted(random.sample(population, size)))
         comb_set.add(comb)
     try:
-        comb_set = build_combination_models(comb_set, start_index=start_index)
+        comb_set = build_combination_models(
+            comb_set, start_index=start_index, population_size=len(population)
+        )
     except Exception as e:
         raise RuntimeError(f"Error serializing unique random combinations: {e}")
     finally:
         return list(comb_set)
 
 
-def build_combination_models(combinations, start_index=1):
+def build_combination_models(combinations, start_index=1, population_size=None):
     """
     Converts raw combinations into CombinationModel instances with calculated properties.
 
@@ -77,7 +82,7 @@ def build_combination_models(combinations, start_index=1):
     try:
         for index, combination in enumerate(combinations, start=start_index):
             model = CombinationModel(combination, index)
-            model.calculate_properties(prop_functions)
+            model.calculate_properties(prop_functions, population_size=population_size)
             models.append(model.to_dict())
     except Exception as e:
         # Handle serialization errors

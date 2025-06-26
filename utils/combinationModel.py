@@ -6,12 +6,20 @@ class CombinationModel:
         self.numbers = sorted(numbers)
         self.properties = {}
 
-    def calculate_properties(self, properties_functions):
+    def calculate_properties(self, properties_functions, **kwargs):
         """Calculates properties of the numbers using provided functions.
         :param properties_functions: List of functions that take a list of numbers and return a key-value pair.
         """
         for func in properties_functions:
-            key, value = func(self.numbers)
+            if (
+                func.__name__ in ("level_key", "level_members")
+                and "population_size" in kwargs
+            ):
+                key, value = func(
+                    self.numbers, population_size=kwargs["population_size"]
+                )
+            else:
+                key, value = func(self.numbers)
             self.properties[key] = value
 
     def to_dict(self):
