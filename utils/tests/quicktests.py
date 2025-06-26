@@ -36,38 +36,26 @@ def level_members(combination, population_size=28):
     return "level_members", result
 
 
-def sequence_key(combination):
-    """Calculate the sequence key for a given combination of numbers.
-    The sequence key is a string that represents the count of consecutive sequences in the combination.
-    Args:
-        combination (list): A list of numbers representing the combination.
-    Returns:
-        tuple: A tuple containing the key name and the sequence key as a string.
-    """
-    sorted_combination = sorted(combination)
-    groups = []
-    count = 1
+if __name__ == "__main__":
+    # Example usage
+    combination = [1, 8, 11, 14, 22, 54]
+    print(level_key(combination))  # Output: ('level_key', '2-2-1')
+    print(
+        level_members(combination)
+    )  # Output: ('level_members', [{'LkM01': '1-8'}, {'LkM02': '11-14'}, {'LkM06': '22'}, {'LkM06': '54'}])
 
-    for i in range(1, len(sorted_combination)):
-        if sorted_combination[i] == sorted_combination[i - 1] + 1:
-            count += 1
-        else:
-            groups.append(count)
-            count = 1
-    groups.append(count)
-    return "sequence_key", "-".join(map(str, groups))
+    # Test with a different population size
+    print(
+        level_key(combination, population_size=56)
+    )  # Output: ('level_key', '2-2-1-0-0-1')
+    print(
+        level_members(combination, population_size=56)
+    )  # Output: ('level_members', [{'LkM01': '1-8'}, {'LkM02': '11-14'}, {'LkM03': '22'}, {'LkM06': '54'}])
 
-
-def prime_count(combination):
-    """Calculate the count of prime numbers in a given combination of numbers.
-    Args:
-        combination (list): A list of numbers representing the combination.
-    Returns:
-        tuple: A tuple containing the key name and the count of prime numbers as a string.
-    """
-
-    def is_prime(n):
-        return n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
-
-    prime_count = sum(1 for n in combination if is_prime(n))
-    return "prime_count", str(prime_count)
+    # Test with 39
+    print(
+        level_key(combination, population_size=39)
+    )  # Output: ('level_key', '2-2-1-0')
+    print(
+        level_members(combination, population_size=39)
+    )  # Output: ('level_members', [{'LkM01': '1-8'}, {'LkM02': '11-14'}, {'LkM03': '22'}, {'LkM06': '54'}])
