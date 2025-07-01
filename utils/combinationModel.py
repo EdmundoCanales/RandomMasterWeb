@@ -18,6 +18,8 @@ class CombinationModel:
                 key, value = func(
                     self.numbers, population_size=kwargs["population_size"]
                 )
+            elif func.__name__ == "generate_boxes" and "index" in kwargs:
+                key, value = func(self.numbers, kwargs["index"])
             else:
                 key, value = func(self.numbers)
             self.properties[key] = value

@@ -71,3 +71,26 @@ def prime_count(combination):
 
     prime_count = sum(1 for n in combination if is_prime(n))
     return "prime_count", str(prime_count)
+
+
+def generate_boxes(combination, cIndex):
+    box_configs = [
+        {"size": 10, "id": 100},
+        {"size": 100, "id": 10},
+        {"size": 1000, "id": 1},
+    ]
+
+    boxes = []
+    for config in box_configs:
+        size = config["size"]
+        box_number = (cIndex - 1) // size + 1
+        position_in_box = (cIndex - 1) % size + 1
+
+        boxes.append(
+            {
+                "id": box_number,
+                "index": position_in_box,
+                "size": size,
+            }
+        )
+    return "boxes", boxes

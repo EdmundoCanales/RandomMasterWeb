@@ -3,6 +3,7 @@ from utils.combinPropertiesFunctions import (
     level_members,
     sequence_key,
     prime_count,
+    generate_boxes,
 )
 from itertools import combinations
 from utils.combinationModel import CombinationModel
@@ -77,12 +78,20 @@ def build_combination_models(combinations, start_index=1, population_size=None):
     Returns:
     list[dict]: List of dictionaries representing enriched CombinationModels.
     """
-    prop_functions = [level_key, level_members, sequence_key, prime_count]
+    prop_functions = [
+        level_key,
+        level_members,
+        sequence_key,
+        prime_count,
+        generate_boxes,
+    ]
     models = []
     try:
         for index, combination in enumerate(combinations, start=start_index):
             model = CombinationModel(combination, index)
-            model.calculate_properties(prop_functions, population_size=population_size)
+            model.calculate_properties(
+                prop_functions, population_size=population_size, index=index
+            )
             models.append(model.to_dict())
     except Exception as e:
         # Handle serialization errors
