@@ -90,4 +90,5 @@ def append_to_model(model_name, data=None, population=None, size=None, amount=No
     return {
         "status": "success",
         "message": f"Data appended to model {model_name} successfully.",
+        "appended_data": resolved_data,
     }
