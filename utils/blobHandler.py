@@ -5,6 +5,7 @@ from utils.combinGenerator import (
     generate_all_combinations,
     generate_random_combinations,
 )
+from utils.combinPropertiesFunctions import refresh_analytics
 
 # Get the connection string from the environment variable
 BLOB_CONNECTION_STRING = os.getenv("BLOB_CONNECTION_STRING")
@@ -61,6 +62,7 @@ def overwrite_model(
 
 
 def append_to_model(model_name, data=None, population=None, size=None, amount=None):
+
     if not model_name:
         raise ValueError("Model name must be provided.")
 
@@ -92,3 +94,43 @@ def append_to_model(model_name, data=None, population=None, size=None, amount=No
         "message": f"Data appended to model {model_name} successfully.",
         "appended_data": resolved_data,
     }
+
+
+def refresh_analytics_model(
+    model_name: str, key_members: list[str], filters_list: list[str]
+):
+    """
+    Refreshes the analytics for a given model and saves or overwrites results in a blob.
+    """
+    if not model_name:
+        raise ValueError("Model name must be provided.")
+
+    path = f"actualModels/{model_name}.json"
+    analythics_path = f"actualModels/{model_name}_analytics.json"
+
+    blob_client = container_client.get_blob_client(path)
+
+    try:
+        model_data = json.loads(blob_client.download_blob().readall())
+    except Exception as e:
+        return {"status": "error", "message": f"Failed to load model data: {str(e)}"}
+
+    #  Refresh analytics
+    analytics = refresh_analytics(model_data, key_members, filters_list)
+
+    # Save analytics to blob
+    analytics_blob_client = container_client.get_blob_client(analythics_path)
+
+    try:
+        analytics_blob_client.upload_blob(
+            json.dumps(analytics, indent=2), overwrite=True
+        )
+        return {
+            "status": "success",
+            "message": f"Analytics for model {model_name} refreshed and saved successfully.",
+            "combinations_count": len(model_data),
+            "key_members": key_members,
+            "filters_list": filters_list,
+        }
+    except Exception as e:
+        return {"status": "error", "message": f"Failed to save analytics: {str(e)}"}

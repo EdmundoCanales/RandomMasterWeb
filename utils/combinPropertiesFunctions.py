@@ -1,3 +1,8 @@
+from collections import defaultdict, Counter
+from typing import Any, Optional
+import statistics
+
+
 def level_key(combination, population_size=28):
     """Calculate the level key for a given combination of numbers.
     The level key is a string that represents the count of numbers in each level based on the
@@ -94,3 +99,81 @@ def generate_boxes(combination, cIndex):
             }
         )
     return "boxes", boxes
+
+
+def calc_deltas(indexes):
+    return [j - i for i, j in zip(indexes[:-1], indexes[1:])]
+
+
+def apply_filter(combination, filter_string):
+    if filter_string == "all":
+        return True
+    for clause in filter_string.split("&"):
+        if "=" not in clause:
+            raise ValueError(
+                f"Invalid filter clause: {clause}. Expected format 'key=value'."
+            )
+        k, v = clause.split("=")
+        if str(combination.get(k)) != v:
+            return False
+    return True
+
+
+def top3_frequent_deltas(deltas):
+    """Returns the top 3 most frequent deltas."""
+    if not deltas:
+        return []
+    freq = Counter(deltas)
+    # sort by frequency descending, then by value ascending
+    most_common = sorted(freq.items(), key=lambda x: (-x[1], x[0]))
+    return [val for val, _ in most_common[:3]]
+
+
+def refresh_analytics(combinations, key_members, filters_list):
+
+    # initialize results
+    resuts: list[dict[str, Any]] = []
+
+    for filter_index, filter_str in enumerate(filters_list):
+
+        # appy filter
+        filtered_combs = [c for c in combinations if apply_filter(c, filter_str)]
+
+        # assing dynamic inndex to filtered combinations
+        for i, c in enumerate(filtered_combs):
+            c["_dyn_index"] = i + 1
+
+        # find matching combos for each key member
+        for key_member in key_members:
+            member = int(
+                key_member
+            )  # note: make this flexible to accept both int and str
+            matching_combos = [
+                c for c in filtered_combs if member in c.get("numbers", [])
+            ]  # note: use get to avoid KeyError
+            dyn_index = [c["_dyn_index"] for c in matching_combos]
+            deltas = calc_deltas(dyn_index)
+
+            # find or create result entry for this key member
+            key_result: Optional[dict[str, Any]] = next(
+                (r for r in resuts if r["key"] == str(key_member)), None
+            )
+            if not key_result:
+                key_result: Optional[dict[str, Any]] = {"key": str(key_member)}
+                resuts.append(key_result)
+
+            metric_key = (
+                "general" if filter_str == "all" else f"filter_{filter_index:02d}"
+            )
+
+            key_result[metric_key] = {
+                "filter": filter_str,
+                "speed(avg)": round(statistics.mean(deltas), 2) if deltas else 0,
+                "speed(min)": min(deltas) if deltas else 0,
+                "speed(max)": max(deltas) if deltas else 0,
+                "speed(stddev)": (
+                    round(statistics.stdev(deltas), 2) if len(deltas) > 1 else 0
+                ),
+                "speed(top3)": top3_frequent_deltas(deltas),
+            }
+    return resuts

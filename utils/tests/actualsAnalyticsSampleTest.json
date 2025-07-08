@@ -1,0 +1,1090 @@
+[
+    {
+        "key": "1",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 6.22,
+            "speed(min)": 1,
+            "speed(max)": 35,
+            "speed(stddev)": 5.83,
+            "speed(top3)": [
+                1,
+                3,
+                2
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 6.31,
+            "speed(min)": 1,
+            "speed(max)": 30,
+            "speed(stddev)": 6.74,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 3.82,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 3.17,
+            "speed(top3)": [
+                1,
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "key": "2",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.37,
+            "speed(min)": 1,
+            "speed(max)": 24,
+            "speed(stddev)": 4.84,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.17,
+            "speed(min)": 1,
+            "speed(max)": 17,
+            "speed(stddev)": 4.68,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 5.08,
+            "speed(min)": 1,
+            "speed(max)": 18,
+            "speed(stddev)": 4.33,
+            "speed(top3)": [
+                4,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "key": "3",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 6.18,
+            "speed(min)": 1,
+            "speed(max)": 30,
+            "speed(stddev)": 5.85,
+            "speed(top3)": [
+                1,
+                3,
+                4
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.4,
+            "speed(min)": 1,
+            "speed(max)": 26,
+            "speed(stddev)": 5.35,
+            "speed(top3)": [
+                1,
+                3,
+                5
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 10.2,
+            "speed(min)": 1,
+            "speed(max)": 24,
+            "speed(stddev)": 9.55,
+            "speed(top3)": [
+                1,
+                4,
+                6
+            ]
+        }
+    },
+    {
+        "key": "4",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.36,
+            "speed(min)": 1,
+            "speed(max)": 31,
+            "speed(stddev)": 4.82,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 3.88,
+            "speed(min)": 1,
+            "speed(max)": 11,
+            "speed(stddev)": 2.66,
+            "speed(top3)": [
+                3,
+                2,
+                1
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 4.27,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 3.99,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "key": "5",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.47,
+            "speed(min)": 1,
+            "speed(max)": 18,
+            "speed(stddev)": 4.39,
+            "speed(top3)": [
+                1,
+                2,
+                4
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.41,
+            "speed(min)": 1,
+            "speed(max)": 22,
+            "speed(stddev)": 4.84,
+            "speed(top3)": [
+                2,
+                3,
+                8
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 5.36,
+            "speed(min)": 1,
+            "speed(max)": 16,
+            "speed(stddev)": 4.48,
+            "speed(top3)": [
+                3,
+                2,
+                1
+            ]
+        }
+    },
+    {
+        "key": "6",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.67,
+            "speed(min)": 1,
+            "speed(max)": 30,
+            "speed(stddev)": 4.99,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.29,
+            "speed(min)": 1,
+            "speed(max)": 21,
+            "speed(stddev)": 4.78,
+            "speed(top3)": [
+                3,
+                1,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 5.7,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 4.5,
+            "speed(top3)": [
+                1,
+                3,
+                5
+            ]
+        }
+    },
+    {
+        "key": "7",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.56,
+            "speed(min)": 1,
+            "speed(max)": 21,
+            "speed(stddev)": 4.52,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.06,
+            "speed(min)": 1,
+            "speed(max)": 16,
+            "speed(stddev)": 3.52,
+            "speed(top3)": [
+                2,
+                3,
+                4
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 4.62,
+            "speed(min)": 1,
+            "speed(max)": 16,
+            "speed(stddev)": 4.37,
+            "speed(top3)": [
+                1,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "key": "8",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 4.99,
+            "speed(min)": 1,
+            "speed(max)": 28,
+            "speed(stddev)": 4.61,
+            "speed(top3)": [
+                2,
+                1,
+                5
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 4.18,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 3.24,
+            "speed(top3)": [
+                1,
+                3,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 2.83,
+            "speed(min)": 1,
+            "speed(max)": 9,
+            "speed(stddev)": 2.2,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "key": "9",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.54,
+            "speed(min)": 1,
+            "speed(max)": 31,
+            "speed(stddev)": 5.24,
+            "speed(top3)": [
+                2,
+                3,
+                1
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 4.08,
+            "speed(min)": 1,
+            "speed(max)": 16,
+            "speed(stddev)": 3.34,
+            "speed(top3)": [
+                2,
+                1,
+                3
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 4.69,
+            "speed(min)": 1,
+            "speed(max)": 11,
+            "speed(stddev)": 3.68,
+            "speed(top3)": [
+                1,
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "key": "10",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.44,
+            "speed(min)": 1,
+            "speed(max)": 26,
+            "speed(stddev)": 4.84,
+            "speed(top3)": [
+                1,
+                2,
+                5
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.06,
+            "speed(min)": 1,
+            "speed(max)": 20,
+            "speed(stddev)": 3.83,
+            "speed(top3)": [
+                3,
+                1,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 6,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 4.02,
+            "speed(top3)": [
+                3,
+                6,
+                1
+            ]
+        }
+    },
+    {
+        "key": "11",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.75,
+            "speed(min)": 1,
+            "speed(max)": 38,
+            "speed(stddev)": 5.13,
+            "speed(top3)": [
+                2,
+                1,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 8.72,
+            "speed(min)": 1,
+            "speed(max)": 25,
+            "speed(stddev)": 7.32,
+            "speed(top3)": [
+                1,
+                6,
+                8
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 39,
+            "speed(min)": 39,
+            "speed(max)": 39,
+            "speed(stddev)": 0,
+            "speed(top3)": [
+                39
+            ]
+        }
+    },
+    {
+        "key": "12",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.61,
+            "speed(min)": 1,
+            "speed(max)": 20,
+            "speed(stddev)": 4.26,
+            "speed(top3)": [
+                1,
+                5,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 4.46,
+            "speed(min)": 1,
+            "speed(max)": 15,
+            "speed(stddev)": 3.08,
+            "speed(top3)": [
+                1,
+                4,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 7.8,
+            "speed(min)": 1,
+            "speed(max)": 18,
+            "speed(stddev)": 6.83,
+            "speed(top3)": [
+                9,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "key": "13",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.06,
+            "speed(min)": 1,
+            "speed(max)": 26,
+            "speed(stddev)": 4.63,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 3.7,
+            "speed(min)": 1,
+            "speed(max)": 12,
+            "speed(stddev)": 3.02,
+            "speed(top3)": [
+                1,
+                2,
+                4
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 7.62,
+            "speed(min)": 1,
+            "speed(max)": 18,
+            "speed(stddev)": 5.73,
+            "speed(top3)": [
+                4,
+                1,
+                3
+            ]
+        }
+    },
+    {
+        "key": "14",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.58,
+            "speed(min)": 1,
+            "speed(max)": 31,
+            "speed(stddev)": 4.6,
+            "speed(top3)": [
+                1,
+                2,
+                5
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 4.74,
+            "speed(min)": 1,
+            "speed(max)": 15,
+            "speed(stddev)": 3.96,
+            "speed(top3)": [
+                1,
+                5,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 5.33,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 3.87,
+            "speed(top3)": [
+                3,
+                2,
+                1
+            ]
+        }
+    },
+    {
+        "key": "15",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.17,
+            "speed(min)": 1,
+            "speed(max)": 34,
+            "speed(stddev)": 4.49,
+            "speed(top3)": [
+                2,
+                1,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 3.75,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 3.3,
+            "speed(top3)": [
+                1,
+                2,
+                4
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 6.12,
+            "speed(min)": 1,
+            "speed(max)": 16,
+            "speed(stddev)": 5.25,
+            "speed(top3)": [
+                1,
+                5,
+                2
+            ]
+        }
+    },
+    {
+        "key": "16",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.66,
+            "speed(min)": 1,
+            "speed(max)": 25,
+            "speed(stddev)": 4.96,
+            "speed(top3)": [
+                1,
+                3,
+                2
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.41,
+            "speed(min)": 1,
+            "speed(max)": 15,
+            "speed(stddev)": 4.08,
+            "speed(top3)": [
+                2,
+                1,
+                3
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 9,
+            "speed(min)": 4,
+            "speed(max)": 21,
+            "speed(stddev)": 5.8,
+            "speed(top3)": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "key": "17",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 6.38,
+            "speed(min)": 1,
+            "speed(max)": 29,
+            "speed(stddev)": 6.12,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 6.6,
+            "speed(min)": 1,
+            "speed(max)": 26,
+            "speed(stddev)": 7.07,
+            "speed(top3)": [
+                1,
+                3,
+                5
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 7.33,
+            "speed(min)": 2,
+            "speed(max)": 17,
+            "speed(stddev)": 5.28,
+            "speed(top3)": [
+                6,
+                2,
+                4
+            ]
+        }
+    },
+    {
+        "key": "18",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 6.05,
+            "speed(min)": 1,
+            "speed(max)": 30,
+            "speed(stddev)": 5.39,
+            "speed(top3)": [
+                2,
+                1,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 6,
+            "speed(min)": 1,
+            "speed(max)": 16,
+            "speed(stddev)": 4.54,
+            "speed(top3)": [
+                1,
+                2,
+                6
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 9,
+            "speed(min)": 3,
+            "speed(max)": 17,
+            "speed(stddev)": 4.73,
+            "speed(top3)": [
+                7,
+                3,
+                9
+            ]
+        }
+    },
+    {
+        "key": "19",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.26,
+            "speed(min)": 1,
+            "speed(max)": 22,
+            "speed(stddev)": 4.4,
+            "speed(top3)": [
+                1,
+                4,
+                2
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 4.03,
+            "speed(min)": 1,
+            "speed(max)": 20,
+            "speed(stddev)": 3.76,
+            "speed(top3)": [
+                1,
+                3,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 14.5,
+            "speed(min)": 2,
+            "speed(max)": 39,
+            "speed(stddev)": 17.02,
+            "speed(top3)": [
+                2,
+                4,
+                13
+            ]
+        }
+    },
+    {
+        "key": "20",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.32,
+            "speed(min)": 1,
+            "speed(max)": 23,
+            "speed(stddev)": 4.77,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 4.8,
+            "speed(min)": 1,
+            "speed(max)": 19,
+            "speed(stddev)": 4.53,
+            "speed(top3)": [
+                1,
+                2,
+                4
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 15,
+            "speed(min)": 15,
+            "speed(max)": 15,
+            "speed(stddev)": 0,
+            "speed(top3)": [
+                15
+            ]
+        }
+    },
+    {
+        "key": "21",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.57,
+            "speed(min)": 1,
+            "speed(max)": 31,
+            "speed(stddev)": 5.73,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 6.23,
+            "speed(min)": 1,
+            "speed(max)": 22,
+            "speed(stddev)": 5.77,
+            "speed(top3)": [
+                2,
+                1,
+                8
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 3.53,
+            "speed(min)": 1,
+            "speed(max)": 10,
+            "speed(stddev)": 2.44,
+            "speed(top3)": [
+                2,
+                3,
+                1
+            ]
+        }
+    },
+    {
+        "key": "22",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.25,
+            "speed(min)": 1,
+            "speed(max)": 36,
+            "speed(stddev)": 5.39,
+            "speed(top3)": [
+                1,
+                2,
+                4
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 5.79,
+            "speed(min)": 1,
+            "speed(max)": 17,
+            "speed(stddev)": 4.05,
+            "speed(top3)": [
+                1,
+                3,
+                6
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 4.75,
+            "speed(min)": 1,
+            "speed(max)": 13,
+            "speed(stddev)": 3.77,
+            "speed(top3)": [
+                1,
+                4,
+                2
+            ]
+        }
+    },
+    {
+        "key": "23",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.56,
+            "speed(min)": 1,
+            "speed(max)": 26,
+            "speed(stddev)": 4.79,
+            "speed(top3)": [
+                3,
+                1,
+                2
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 8.11,
+            "speed(min)": 2,
+            "speed(max)": 18,
+            "speed(stddev)": 4.87,
+            "speed(top3)": [
+                6,
+                9,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 3.75,
+            "speed(min)": 1,
+            "speed(max)": 9,
+            "speed(stddev)": 2.35,
+            "speed(top3)": [
+                3,
+                1,
+                5
+            ]
+        }
+    },
+    {
+        "key": "24",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.78,
+            "speed(min)": 1,
+            "speed(max)": 38,
+            "speed(stddev)": 5.52,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 11.38,
+            "speed(min)": 1,
+            "speed(max)": 27,
+            "speed(stddev)": 8.92,
+            "speed(top3)": [
+                9,
+                1,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 3.82,
+            "speed(min)": 1,
+            "speed(max)": 8,
+            "speed(stddev)": 2.38,
+            "speed(top3)": [
+                2,
+                1,
+                6
+            ]
+        }
+    },
+    {
+        "key": "25",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.46,
+            "speed(min)": 1,
+            "speed(max)": 33,
+            "speed(stddev)": 5.38,
+            "speed(top3)": [
+                1,
+                2,
+                4
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 6.75,
+            "speed(min)": 1,
+            "speed(max)": 24,
+            "speed(stddev)": 6.07,
+            "speed(top3)": [
+                1,
+                3,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 3.64,
+            "speed(min)": 1,
+            "speed(max)": 9,
+            "speed(stddev)": 2.37,
+            "speed(top3)": [
+                1,
+                5,
+                3
+            ]
+        }
+    },
+    {
+        "key": "26",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 5.32,
+            "speed(min)": 1,
+            "speed(max)": 21,
+            "speed(stddev)": 4.5,
+            "speed(top3)": [
+                1,
+                2,
+                6
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 11,
+            "speed(min)": 1,
+            "speed(max)": 45,
+            "speed(stddev)": 13.48,
+            "speed(top3)": [
+                3,
+                4,
+                1
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 3,
+            "speed(min)": 1,
+            "speed(max)": 9,
+            "speed(stddev)": 2.19,
+            "speed(top3)": [
+                1,
+                2,
+                4
+            ]
+        }
+    },
+    {
+        "key": "27",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 6.02,
+            "speed(min)": 1,
+            "speed(max)": 31,
+            "speed(stddev)": 5.01,
+            "speed(top3)": [
+                1,
+                5,
+                2
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 8.53,
+            "speed(min)": 2,
+            "speed(max)": 31,
+            "speed(stddev)": 8.98,
+            "speed(top3)": [
+                2,
+                4,
+                3
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 4.73,
+            "speed(min)": 1,
+            "speed(max)": 14,
+            "speed(stddev)": 4.36,
+            "speed(top3)": [
+                1,
+                9,
+                2
+            ]
+        }
+    },
+    {
+        "key": "28",
+        "general": {
+            "filter": "all",
+            "speed(avg)": 6.04,
+            "speed(min)": 1,
+            "speed(max)": 32,
+            "speed(stddev)": 5.23,
+            "speed(top3)": [
+                3,
+                2,
+                4
+            ]
+        },
+        "filter_01": {
+            "filter": "level_key=2-2-1",
+            "speed(avg)": 7.27,
+            "speed(min)": 1,
+            "speed(max)": 21,
+            "speed(stddev)": 6.31,
+            "speed(top3)": [
+                3,
+                4,
+                2
+            ]
+        },
+        "filter_02": {
+            "filter": "level_key=2-1-2&sequence_key=1-1-1-1-1",
+            "speed(avg)": 3.1,
+            "speed(min)": 1,
+            "speed(max)": 13,
+            "speed(stddev)": 3.04,
+            "speed(top3)": [
+                1,
+                2,
+                3
+            ]
+        }
+    }
+]

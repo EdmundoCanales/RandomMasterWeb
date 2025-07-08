@@ -13,6 +13,11 @@ def handle_request(data):
     model_name = data.get("model")
     model_type = data.get("modelType")
     provided_data = data.get("data")
+    if sample is not None:
+        key_members = [str(x) for x in sample]
+    else:
+        key_members = []
+    filters_list = data.get("filtersList", [])
 
     if func_name in [
         "generateAllPossibleCombinations",
@@ -90,6 +95,20 @@ def handle_request(data):
             }, 200
         except Exception as e:
             return {"error adding combination": str(e)}, 500
+
+    elif func_name == "RefreshActualsAnalytics":
+        try:
+            result = blobHandler.refresh_analytics_model(
+                model_name=model_name,
+                key_members=key_members,
+                filters_list=filters_list,
+            )
+            return {
+                "message": "Actual analytics refreshed successfully",
+                "result": result,
+            }, 200
+        except Exception as e:
+            return {"error refreshing actual analytics": str(e)}, 500
 
     else:
         return {"error": "Invalid function name."}, 400
