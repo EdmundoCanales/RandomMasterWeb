@@ -66,6 +66,10 @@ def calc_deltas(indexes):
     return [j - i for i, j in zip(indexes[:-1], indexes[1:])]
 
 
+def test_is_prime(n):
+    return n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
+
+
 def test_apply_filter(combination, filter_string):
     if filter_string == "all":
         return True
@@ -203,3 +207,9 @@ if __name__ == "__main__":
             ["all", "level_key=2-2-1", "level_key=2-1-2&sequence_key=1-1-1-1-1"],
         )
     )
+    # Example of prime test
+    print(f"Is number '1' prime? {test_is_prime(1)}")  # True
+    print(f"Is number '3' prime? {test_is_prime(3)}")  # True
+    print(f"Is number '13' prime? {test_is_prime(13)}")  # False
+    print(f"Is number '18' prime? {test_is_prime(18)}")  # False
+    print(f"Is number '26' prime? {test_is_prime(26)}")  # False

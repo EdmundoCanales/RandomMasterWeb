@@ -9,7 +9,6 @@ e.g. 28 C 5, this generates 98,280 combination objects, each object contains a c
 - Prime count = returns the number of prime members within combination.
 based on these properties report monitors accuracy of finding combinations of member groups with highest probability.
 
-
 """
 # 🎲 Combination Generator API (Azure Functions)
 
@@ -37,6 +36,30 @@ func start
 ## 📁 Folder Reference
 - `HttpTriggerAPI/__init__.py` → routes and handles API logic
 - `utils/logic.py` → contains `generate_combination()` function
+
+## 🧩 Combinations Properties
+- When a `combination` object is created it contains a set of properties that can be used for data clustering and classification. <br> below are described current calculated properties using `{1,3,13,18,26}` for refference.
+
+  |Property|Description|Result|
+  |:--------:|:-----------:|------|
+  |LevelKey|Entire *'Sample'* is divided in levels of *size* 10, e.g. 28/10 results in 3 levels: L1 = 1 to 10, L2 = 11 to 20, L3 = 21 to 28.| **2-2-1** : L1 = 1,3, L2 = 13,18 and L3 = 26|
+  |SeqKey| Represents Sequential numbers in combination (n, n+1, n+2 ...) when a member is not in *Sequence* is represented by a unit.| **1-1-1-1-1** : no sequential members found.|
+  |Level Members| JSON format returning an array of levels with respective members.|`[{"L1":"1,3","L2":"13,18", "L3":"26"}]`|
+  |Prime Count| Returns the count of Prime numbers in combination | **2** : 3 and 13 are prime numbers.|
+  
+  In progress properties calculation:
+  |Property|Description|Result|
+  |:--------:|:-----------:|------|
+  |Gap Variance| variability of gaps between sorted numbers.| **2-10-5-8** : 1 + gap = 3 => gap = 2, 3 + gap = 13 => gap = 10 ...|
+  |MaxGap| Largest interval between combination members (sorted).| **10** : `MAX({2-10-5-8})`|
+  |AvgGap| Average of gaps list | **~6.2** : `AVG({2-10-5-8})`|
+  |ArithTotal|Total sum of combination's members.| **61** : `SUM({1,3,13,18,26})`|
+  |ArithAvg| Average of combination's members.| **12.2** : `AVG({1,3,13,18,26})`|
+  |ArithStd| Stardard Deviation of combination's members.| **~9.32** : `STDEV({1,3,13,18,26})`|
+
+
+
+
 
 ---
 Made with ❤️, caffeine, and slightly too much Blink-182.
